@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm dev",
+      "cwd": "${workspaceFolder}/apps/nextjs",
+      "webRoot": "${workspaceFolder}/apps/nextjs",
+      "skipFiles": [
+        "<node_internals>/**",
+        "**/.next/**",
+        "**/node_modules/**"
+      ],
+      "sourceMaps": true,
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/apps/nextjs/src/**",
+        "${workspaceFolder}/packages/**",
+        "!**/.next/**",
+        "!**/node_modules/**"
+      ],
+      "sourceMapPathOverrides": {
+        "turbopack:///*": "${webRoot}/*",
+        "turbopack:///[project]/*": "${webRoot}/*",
+        "/turbopack/[project]/*": "${webRoot}/*"
+      }
+    }
+  ]
+}
